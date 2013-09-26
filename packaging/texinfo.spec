@@ -84,6 +84,10 @@ mv ChangeLog_utf8 ChangeLog
 
 %find_lang %{name}
 
+# Tizen SDK license
+mkdir -p %{buildroot}/usr/share/license
+cp COPYING %{buildroot}/usr/share/license/%{name}
+
 %clean
 rm -rf %{buildroot}
 
@@ -137,6 +141,7 @@ fi
 %{_bindir}/info
 %{_bindir}/infokey
 /sbin/install-info
+/usr/share/license/%{name}
 
 %files tex
 %defattr(-,root,root)
