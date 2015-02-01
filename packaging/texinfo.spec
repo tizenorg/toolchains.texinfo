@@ -145,3 +145,4 @@ fi
 %{_bindir}/texi2pdf
 %{_bindir}/pdftexi2dvi
 %{tex_texinfo}/*
+
