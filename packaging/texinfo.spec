@@ -5,13 +5,13 @@
 %define tex_texinfo %{_datadir}/texmf/tex/texinfo
 
 Name:           texinfo
-Version:        4.13
+Version:        4.13a
 Release:        7
 License:        GPLv3+
 Summary:        Tools needed to create Texinfo format documentation files
 Url:            http://www.gnu.org/software/texinfo/
 Group:          Applications/Publishing
-Source0:        %{name}-%{version}.tar.bz2
+Source0:        ftp://ftp.gnu.org/gnu/texinfo/texinfo-%{version}.tar.gz
 Source1:        info-dir
 Source2:        texi2pdf.man
 Patch0:         texinfo-4.12-zlib.patch
@@ -57,7 +57,7 @@ The texinfo-tex package provides tools to format Texinfo documents
 for printing using TeX.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-4.13
 %patch0 -p1 -b .zlib
 %patch1 -p1 -b .data_types
 
